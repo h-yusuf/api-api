@@ -12,10 +12,8 @@ class Employee extends Model
 
     use HasFactory;
 
-    // Nama tabel jika berbeda dengan default 'employees'
     protected $table = 'employees'; 
 
-    // Kolom yang dapat diisi (fillable) melalui mass assignment
     protected $fillable = [
         'npk_siste',
         'npk_akses',
@@ -27,8 +25,7 @@ class Employee extends Model
         'status',
     ];
 
-    // Kolom yang tidak dapat diisi (guarded)
     protected $guarded = [
-        'id', // Sebagai contoh
+        'id', 
     ];
 }

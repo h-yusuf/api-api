@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('engine_master', function (Blueprint $table) {
-            $table->id(); // id sebagai primary key
+            $table->id(); 
             $table->string('name', 250)->nullable();
             $table->bigInteger('warning_dandory_id')->nullable()->index();
             $table->string('line', 255)->nullable();

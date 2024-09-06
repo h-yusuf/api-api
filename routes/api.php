@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\api\KaryawanController;
 use App\Http\Controllers\api\MesinController;
+use App\Http\Controllers\ImportController;
+use App\Http\Controllers\ImportFileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +24,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Karyawan
 Route::get('/karyawanGetAll', [KaryawanController::class, 'karyawanGetAll']);
+Route::post('/karyawan/store', [KaryawanController::class, 'store']);
+Route::post('/karyawan/import', [ImportFileController::class, 'karyawanImport']);
 
 // Mesin
 Route::get('/mesinGetAll', [MesinController::class, 'mesinGetAll']);

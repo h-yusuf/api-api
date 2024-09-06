@@ -34,7 +34,6 @@ class Employes extends Seeder
                 'shift' => '0600_1500 & 1400_2300 & 2100_0600',
                 'status' => 'MAGANG'
             ],
-            // Tambahkan data lainnya sesuai dengan gambar
         ]);
     }
 }

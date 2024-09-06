@@ -11,11 +11,11 @@ return new class extends Migration {
                 $table->integer('npk_siste')->unique();  // Kolom NPK SISTE
                 $table->string('npk_akses')->unique();   // Kolom NPK Akses
                 $table->string('name');                  // Kolom NAME
-                $table->string('division');              // Kolom DIVISI
-                $table->string('department');            // Kolom DEPT
-                $table->string('section');               // Kolom SECTION
-                $table->string('shift');                 // Kolom SHIFT
-                $table->string('status');                // Kolom STAT
+                $table->string('division')->nullable();              // Kolom DIVISI
+                $table->string('department')->nullable();            // Kolom DEPT
+                $table->string('section')->nullable();               // Kolom SECTION
+                $table->string('shift')->nullable();                 // Kolom SHIFT
+                $table->string('status')->nullable();                // Kolom STAT
                 $table->timestamps();
         });
     }

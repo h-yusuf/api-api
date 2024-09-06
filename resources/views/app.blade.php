@@ -15,12 +15,40 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- SweetAlert CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
     <div class="flex w-full items-center justify-center h-screen bg-green-100">
         <button class="btn btn-outline btn-primary" onclick="my_modal_5.showModal()">Upload Excel</button>
     </div>
+
+    <!-- SweetAlert Notifications -->
+    @if(session('success'))
+        <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: '{{ session('success') }}',
+                timer: 3000,
+                showConfirmButton: false
+            });
+        </script>
+    @endif
+
+    @if(session('error'))
+        <script>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '{{ session('error') }}',
+                timer: 3000,
+                showConfirmButton: false
+            });
+        </script>
+    @endif
 
     <!-- Modal -->
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">

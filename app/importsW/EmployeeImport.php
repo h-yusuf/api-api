@@ -20,6 +20,9 @@ class EmployeeImport implements ToModel, WithHeadingRow
             'section' => $row['section'],
             'shift' => $row['shift'],
             'status' => $row['status'],
+            'date' => $row['tanggal'],
+            'cin' => $row['cin'],
+            'cout' => $row['cout'],
         ]);
     }
     

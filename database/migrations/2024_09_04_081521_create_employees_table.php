@@ -14,7 +14,10 @@ return new class extends Migration {
                 $table->string('division')->nullable();              // Kolom DIVISI
                 $table->string('department')->nullable();            // Kolom DEPT
                 $table->string('section')->nullable();               // Kolom SECTION
-                $table->string('shift')->nullable();                 // Kolom SHIFT
+                $table->string('shift')->nullable();    
+                $table->date('date')->nullable();                 // Kolom SHIFT
+                $table->time('cout')->nullable();  
+                $table->time('cin')->nullable();                 // Kolom SHIFT
                 $table->string('status')->nullable();                // Kolom STAT
                 $table->timestamps();
         });

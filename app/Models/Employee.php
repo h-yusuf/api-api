@@ -21,6 +21,9 @@ class Employee extends Model
         'division',
         'department',
         'section',
+        'date',
+        'cin',
+        'cout',
         'shift',
         'status',
     ];

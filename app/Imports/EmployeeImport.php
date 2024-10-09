@@ -21,7 +21,11 @@ class EmployeeImport implements ToModel, WithStartRow
                 'department' => $row[5],
                 'section' => $row[6],
                 'shift' => $row[7],
+                                
                 'status' => $row[8],
+                'date' => $row[9],
+                'cin' => $row[10],
+                'cout' => $row[11],
             ]);
         } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
             $failures = $e->failures();
